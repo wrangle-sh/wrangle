@@ -1,0 +1,23 @@
+{
+  "name": "@wrangle/root",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.1",
+    "biome": "^0.3.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx,json,yaml,md}": [
+      "biome check --apply",
+      "prettier --write"
+    ]
+  }
+}

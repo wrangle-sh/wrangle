@@ -1,0 +1,8 @@
+{
+  "name": "@wrangle/cli",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  }
+}
