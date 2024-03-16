@@ -1,0 +1,22 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Dependency Install
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      - run: pnpm i
+
+      # Tests
+      - run: pnpm run -r lint
+      - run: pnpm run -r typecheck
