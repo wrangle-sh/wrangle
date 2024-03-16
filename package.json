@@ -15,7 +15,7 @@
     "typescript": "^5.4.2"
   },
   "lint-staged": {
-    "**/*.{ts,tsx,yaml,md}": [
+    "**/*.{ts,tsx}": [
       "biome check --apply",
       "prettier --write"
     ]
