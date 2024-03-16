@@ -3,6 +3,12 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "lint": "biome check .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.6.1",
+    "typescript": "^5.4.2"
   }
 }
