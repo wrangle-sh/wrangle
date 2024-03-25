@@ -19,5 +19,5 @@ jobs:
       - run: pnpm i
 
       # Tests
-      - run: pnpm run -r lint
-      - run: pnpm run -r typecheck
+      - run: pnpm lint
+      - run: pnpm typecheck
